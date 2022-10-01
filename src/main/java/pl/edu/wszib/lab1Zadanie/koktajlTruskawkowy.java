@@ -9,6 +9,5 @@ public class koktajlTruskawkowy extends koktajl implements Smakowalne {
 
     @Override
     public void smak() {
-
     }
 }
