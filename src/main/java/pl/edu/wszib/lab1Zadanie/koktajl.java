@@ -7,6 +7,4 @@ public abstract class koktajl implements Jadalne, Pijalne {
         pij();
     }
 
-    @Override
-    public void pij() {}
 }
