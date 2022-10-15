@@ -21,14 +21,9 @@ package pl.edu.wszib.lab1Zadanie;
 public class Application {
 
     public static void main(String[] args) {
-        KoktajlTruskawkowy koktajl = new KoktajlTruskawkowy(300,RodzajTruskawki.POLKA, RodzajSmaku.TRUSKAWKOWY);
+        KoktajlTruskawkowy koktajl = new KoktajlTruskawkowy(300,RodzajTruskawki.POLKA);
         koktajl.jedz();
         koktajl.pij();
-
-        KoktajlTruskawkowy koktajl2 = new KoktajlTruskawkowy(300,RodzajTruskawki.NONE, RodzajSmaku.CIASTECZKOWY);
-        koktajl2.jedz();
-        koktajl2.pij();
-
 
         int myVar = 5;
         test(myVar);
