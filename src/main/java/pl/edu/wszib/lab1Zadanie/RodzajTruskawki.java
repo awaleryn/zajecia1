@@ -10,9 +10,11 @@ public enum RodzajTruskawki {
 
     KENT("Dla fanów slodyczy"),
 
-    CHRISTINE("Zaowocuje szybko i obficie");
+    CHRISTINE("Zaowocuje szybko i obficie"),
 
+    NONE("brak");
 
+    //private final String nazwa;
     private final String cecha;
     RodzajTruskawki(final String cecha) {
         this.cecha = cecha;

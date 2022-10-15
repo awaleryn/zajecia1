@@ -12,25 +12,32 @@ package pl.edu.wszib.lab1Zadanie;
 public class KoktajlTruskawkowy extends Koktajl implements Smakowalne {
 
     private final RodzajTruskawki rodzajTruskawki;
+    private final RodzajSmaku rodzajSmaku;
 
     public KoktajlTruskawkowy(final int kcal,
-                              final RodzajTruskawki rodzajTruskawki) {
+                              final RodzajTruskawki rodzajTruskawki,
+                              final RodzajSmaku rodzajSmaku) {
         super(kcal);
         this.rodzajTruskawki = rodzajTruskawki;
+        this.rodzajSmaku = rodzajSmaku;
     }
+
 
     @Override
     public void pij() {
-        System.out.println("Pije koktajl o smaku "
-                + smak() + ", ktora cechuje sie "
-                + rodzajTruskawki.cecha());
+        if (rodzajSmaku.equals(RodzajSmaku.TRUSKAWKOWY)) {
+            System.out.println("Pije koktajl o smaku "
+                    + smak() + ", ktora cechuje sie "
+                    + rodzajTruskawki.cecha());
+        } else {
+            System.out.println("Pije koktajl o smaku " + smak()
+                    + " ktorego poziom slodkosci wynosi " + rodzajSmaku.poziomSlodkosci());
+        }
 
-        String message = String.format("Pije koktajl o smaku %s, ktora cechuje sie %s", smak(), rodzajTruskawki.cecha());
-        System.out.println(message);
     }
 
     @Override
-    public String smak() {
-        return "Truskawkowy";
+    public RodzajSmaku smak() {
+        return this.rodzajSmaku;
     }
 }
